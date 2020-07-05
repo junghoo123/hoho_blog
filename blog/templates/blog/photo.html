@@ -1,0 +1,112 @@
+{% load static%}
+
+<html>
+ <head>
+   <meta charset="utf-8">
+    <title>♡사진첩 페이지♡</title>
+    <style>
+	 body{background-color:#FFD9EC;}
+
+	 section{
+	              font-size:15px;
+				  font-weight:bold;
+				  padding:10px;
+				 }
+
+	 footer{padding:10px;
+	            margin:20px;
+			   }
+	</style>
+ </head>
+ <body>
+  <header>
+   <br> </br>
+   <center>
+     <h1><a id="up"> ♡ HOOHOO'S STORY ♡ </a></h1>
+	 <br> </br>
+	 <hr />
+   </center>
+  </header>
+   <br> </br>
+  <section>
+     <span id="hot">
+	 <center />
+	  <h2> <p strong style="color:red;"> ☆HOT PHOTO☆ </p></h2>
+      <a href="{% static 'images/trip1.jpg' %}" target="photo" > 가족여행</a></li>
+      <a href="{% static 'images/family1.jpg' %}" target="photo" > 가족사진</a></li>
+      <a href="{% static 'images/fourth.jpg' %}" target="photo"> 첫 용후</a></li>
+      <br> </br>
+     </span>
+     <div id="photo">
+     <iframe src="{% static 'images/trip1.jpg' %}" width="800" height="400" name="photo" scrolling="yes"></iframe>
+     </div>
+    <div class="hot 0912">
+   	 <center>
+	 <br> </br>
+     <img src="{% static 'images/trip1.jpg' %}" alt="가족여행1" width="200" height="200">
+	 <img src="{% static 'images/trip2.jpg' %}" alt="가족여행2" width="200" height="200">
+	 <img src="{% static 'images/trip3.jpg' %}" alt="가족여행3" width="200" height="200">
+	 <img src="{% static 'images/trip4.jpg' %}" alt="가족여행4" width="200" height="200">
+	 <img src="{% static 'images/trip5.jpg' %}" alt="가족여행5" width="200" height="200">
+     <p strong style="color:#8C8C8C;"> <a id="hot1"> 2019.09.12-13 가평 가족여행 </a> </p>
+	 </center>
+	</div>
+	<div class="hot0610">
+	 <br> </br>
+	 <center>
+	 <img src="{% static 'images/family1.jpg' %}" alt="가족사진1" width="200" height="200">
+	 <img src="{% static 'images/family2.jpg' %}" alt="가족사진2" width="200" height="200">
+	 <img src="{% static 'images/family3.jpg' %}" alt="가족사진3" width="200" height="200">
+	 <img src="{% static 'images/family4.jpg' %}" alt="가족사진4" width="200" height="200">
+	 <img src="{% static 'images/family5.jpg' %}" alt="가족사진5" width="200" height="200">
+	 <p strong style="color:#8C8C8C;"><a id="hot2"> 2019.06.10 가족사진 </a> </p>
+	 </center>
+	</div>
+	<div class="hot0510">
+	 <br> </br>
+	 <center>
+	 <img src="{% static 'images/frist.jpg' %}" alt="첫용후1" width="200" height="200">
+	 <img src="{% static 'images/second.jpg' %}" alt="첫용후2" width="200" height="200">
+	 <img src="{% static 'images/third.jpg' %}" alt="첫용후3" width="200" height="200">
+	 <img src="{% static 'images/fourth.jpg' %}" alt="첫용후4" width="200" height="200">
+	 <img src="{% static 'images/fifth.jpg' %}" alt="첫용후5" width="200" height="200">
+	 <p strong style="color:#8C8C8C;"> <a id="hot3"> 2019.05.10 용후 우리집으로 온 날 </a> </p>
+	 <hr />
+	 </center>
+	</div>
+	<div class="photo">
+	<br> </br>
+	 <center>
+	  <img src="{% static 'images/baby.jpg' %}" alt="그 외 사진 1" width="200" height="200">
+	  <img src="{% static 'images/aunt.jpg' %}" alt="그 외 사진 2" width="200" height="200">
+	  <img src="{% static 'images/myfamily.jpg' %}" alt="그 외 사진 3" width="200" height="200">
+	  <img src="{% static 'images/flower.jpg' %}" alt="그 외 사진 4" width="200" height="200">
+	  <img src="{% static 'images/gibs.jpg' %}" alt="그 외 사진 5" width="200" height="200">
+	  </center>
+	 </div>
+	 <div class="ptoto2">
+	 <center>
+	 <img src="{% static 'images/friend.jpg' %}" alt="그 외 사진 6" width="200" height="200">
+	 <img src="{% static 'images/japan.jpg' %}" alt="그 외 사진 7" width="200" height="200">
+	 <img src="{% static 'images/sea.jpg' %}" alt="그 외 사진 8" width="200" height="200">
+	 <img src="{% static 'images/pillow.jpg' %}" alt="그 외 사진 8" width="200" height="200">
+	 <img src="{% static 'images/wink.jpg' %}" alt="그 외 사진 8" width="200" height="200">
+	 </center>
+	</div>
+	<div class="photo">
+	 <center>
+	 <p strong style="color:#8C8C8C;">  소소한 일상들-♥ </p>
+	 </center>
+	</div>
+  </section>
+ </body>
+
+ <footer>
+	<br> </br>
+	 <hr />
+	 <center>
+	 <a href="#up"> 제일 위로 올라기기 /</a>
+	 <a href="{% url 'main' %}"> 메인 홈페이지로 돌아가기 </a>
+	 </center>
+  </footer>
+</html>

@@ -1,0 +1,357 @@
+{% load static%}
+<html>
+ <head>
+   <meta charset="utf-8">
+    <title>♡정후의 페이지♡</title>
+    <style>
+         *{
+				margin: 0; padding: 0;
+				font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+			}
+
+			a {text-decoration: none;}
+
+			li {list-style: none;}
+
+			body {
+				width: 960px; margin: 0 auto;
+				background: #FFD9EC;
+				}
+
+			#page-wrapper{
+				background: white;
+				margin: 40px 0; padding: 10px 20px;
+				border-radius: 5px;
+				box-shadow: 0 4px 10px rgba(100, 100, 100, 0.3);
+			}
+
+			#main-header{padding: 40px 50px;}
+
+			.master-title{
+				font-size: 23px;
+				color: #181818;
+			}
+
+			.master-description{
+				font-size: 15px; font-weight: 500;
+				color: #383838;
+			}
+
+			#main-navigation{
+				border-top: 1px solid #C8C8C8;
+				border-bottom: 1px solid #C8C8C8;
+				margin-bottom: 20px;
+				height: 40px;
+			}
+
+			.pull-left{float: left;}
+
+			.outer-menu-item{
+				float: left;
+				position: relative;
+				font-weight:bold;
+			}
+
+			.menu-title{
+				display: block;
+				height: 30px; line-height: 30px;
+				text-align: center;
+				padding: 5px 20px;
+			}
+
+			.outer-menu-item:hover{
+				background:black;
+				color: white;
+			}
+
+			.pull-right{float:right;}
+
+			.search-bar{
+				height: 26px;
+				padding: 7px;
+			}
+
+			.input-search{
+				display: block;
+				float: left;
+				background-color: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				border-radius: 15px 0 0 15px;
+				box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+				width: 120px; height: 24px;
+				padding: 0 0 0 10px;
+				font-size: 12px;
+				color: #555555;
+			}
+
+			.input-search-submit{
+				display: block;
+				float: left;
+				width: 50px; height: 26px;
+				border-radius: 0 15px 15px 0;
+				border: 1px solid #CCCCCC;
+				margin-left: -1px;
+				vertical-align: top;
+				display: inline-block;
+			}
+
+			.input-search:focus{
+				border-color: rgba(82,168,236, 0.8);
+				outline: 0;
+				box-shadow: inset 0 1px 1px rgba(0,0,0, 0.05);
+			}
+
+			.inner-menu{
+				display: none;
+				position: absolute;
+				top: 40px; left: 0;
+				width: 100%;
+				background: white;
+				box-shadow: 0 2px 6px rgba(5,5,5, 0.9);
+				z-index: 1000;
+				text-align: center;
+			}
+
+			.inner-menu-item > a {
+				display: block;
+				padding: 5px 10px;
+				color: black;
+			}
+
+			.inner-menu-item > a:hover{
+				background: black;
+				color: white;
+			}
+
+
+
+			#content{
+				overflow: hidden;
+				padding: 0 50px;
+			}
+
+			#main-section{
+				float: left;
+				width: 510px;
+			}
+
+
+			article{
+				padding: 0 10px 20px 10px;
+				border-bottom: 1px solid #C8C8C8;
+			}
+
+			.article-header{padding: 20px 0;}
+
+			.article-title{
+				font-size: 25px;
+				font-weight: 500;
+				padding-bottom: 10px;
+			}
+
+			.article-date{font-size: 13px;}
+
+			.article-body{font-size: 14px;}
+
+	       #ul,li{list-style:none;}
+          #slide{height:300px;position:relative;overflow:hidden;}
+          #slide ul{width:400%;height:100%;transition:1s; margind:20px;}
+          #slide ul:after{content:"";display:block;clear:both;}
+          #slide li{float:left;width:25%;height:100%;}
+          #slide input{display:none;}
+          #slide label{display:inline-block;vertical-align:middle;width:10px;height:10px;border:2px solid #666;background:#fff;transition:0.3s;border-radius:50%;cursor:pointer;}
+          #slide .pos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+          #pos1:checked~ul{margin-left:0%;}
+          #pos2:checked~ul{margin-left:-100%;}
+          #pos3:checked~ul{margin-left:-200%;}
+          #pos1:checked~.pos>label:nth-child(1){background:#666;}
+          #pos2:checked~.pos>label:nth-child(2){background:#666;}
+          #pos3:checked~.pos>label:nth-child(3){background:#666;}
+			#main-aside{
+				float: right;
+				width: 200px;
+			}
+
+			.aside-list{padding: 10px 0 30px 0;}
+
+			.aside-list li a{
+				margin-left: 8px;
+				font-size: 13px;
+				color: #6C6C6C;
+			}
+
+			#main-footer{
+				padding: 10px 50px;
+				text-align: left;
+				font-size:12px;
+			}
+
+		</style>
+
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function () {
+
+				$('.outer-menu-item').hover(function () {
+
+					$(this).find('.inner-menu').show();
+
+					}, function () {
+
+				$(this).find('.inner-menu').hide();
+
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+
+
+	<body>
+
+		<div id="page-wrapper">
+
+			<header id="main-header">
+
+				<hgroup>
+
+					<h1 class="master-title"> <a id="home"> ♥HOOHOO'S BLOG♥ </a> </h1>
+
+					<h2 class="master-description"> <a href="#home"> ☆BABY YONG☆</a> </h2>
+
+				</hgroup>
+
+				<nav id="main-navigation">
+
+					<div class="pull-left">
+
+						<ul class="outer-menu">
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title"> <a href="{% url 'photo' %}"> ♡ PHOTO </a> </span>
+
+							</li>
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title"> <a href="{% url 'yonghoo' %}"> ♡ YONGHOO </a> </span>
+
+							</li>
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title"> <a href="{% url 'junghoo' %}">♡ JUNGHOO</a></span>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+					<div class="pull-right">
+
+						<div class="search-bar">
+
+							<form>
+
+								<input type="text" class="input-search" />
+
+								<input type="submit" class="input-search-submit" value="Search" />
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</nav>
+
+			</header>
+
+			<div id="content">
+
+				<section id="main-section">
+
+					<article>
+
+						<div class="article-header">
+
+							<h1 class="article-title">HBD YONGHOO♥</h1>
+
+							<h2 class="article-date"> 2020. 03. 07 ★</h2>
+
+						</div>
+
+						<div class="article-body">
+						  <div id="cotent">
+                           <div id="slide">
+		                    <input type="radio" name="pos" id="pos1" checked>
+		                    <input type="radio" name="pos" id="pos2" >
+		                    <input type="radio" name="pos" id="pos3" >
+		                      <ul>
+                               <li> <img src="{% static 'images/hbd1.jpg' %}"  alt="이미지1" width="430" height="350"><</li>
+                               <li> <img src="{% static 'images/hbd2.jpg' %}"  alt="이미지2" width="430" height="350"></li>
+                               <li> <img src="{% static 'images/hbd3.jpg' %}"  alt="이미지3" width="430" height="350"></li>
+                             </ul>
+                             <p class="pos">
+                              <label for="pos1"></label>
+                              <label for="pos2"></label>
+                             <label for="pos3"></label>
+                            </p>
+                          </div>
+						 </div>
+						 <br />
+
+							<p> ♡ 용후의 두번째 생일 ♡ </p>
+
+							<br />
+
+							<p>☆ 참석자: 엄마, 아빠,  3명의 누나들과 병민이 형</p>
+
+						</div>
+
+					</article>
+
+				</section>
+
+				<aside id = "main-aside">
+			       <div class="aside-list">
+						<h3> <a href="{% url 'login' %}">♥LOGIN♥ </a> </h3>
+				    </div>
+					<div class="aside-list">
+						<h3> <a href="{% url 'signup' %}">♥JOIN♥ </a></h3>
+					</div>
+                     <br> </br>
+					<div class="aside-list">
+						<h3> <a href="{% url 'photo' %}">- HOT ♡ </a></h3>
+						<ul>
+							<li><a href="{% url 'photo' %}"> - 2019.09.12-13. 가족여행</a></li>
+							<li><a href="{% url 'photo' %}"> - 2018.06.10. 가족사진 찍은 날</a></li>
+							<li><a href="{% url 'photo' %}"> - 2018.05.10. 용후 처음 집온 날</a></li>
+						</ul>
+					</div>
+
+
+				</aside>
+
+			</div>
+
+			<footer id="main-footer">
+
+				<a href="#home">제일 위로 올라가기</a>
+
+			</footer>
+
+		</div>
+
+	</body>
+
+</html>
